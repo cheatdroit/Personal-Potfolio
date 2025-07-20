@@ -18,21 +18,91 @@ const About: React.FC = () => {
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-primary-50 via-white to-accent-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="space-y-6"
+            >
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white">
+                About Me
+              </h1>
+              <p className="text-xl text-gray-600 dark:text-gray-400">
+                A passionate DevSecOps engineer from Vadodara, Gujarat, dedicated to building secure, scalable, and automated infrastructure solutions.
+              </p>
+              <div className="flex items-center space-x-2 text-gray-600 dark:text-gray-400">
+                <MapPin className="w-5 h-5" />
+                <span>Vadodara, Gujarat, India</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                <span className="text-gray-600 dark:text-gray-400">Available for opportunities</span>
+              </div>
+            </motion.div>
+
+            {/* Profile Image */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative flex justify-center lg:justify-end"
+            >
+              <div className="relative">
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+                  className="absolute -inset-4 bg-gradient-to-r from-primary-400 to-accent-400 rounded-full blur-lg opacity-20"
+                ></motion.div>
+                
+                <motion.div
+                  animate={{ y: [0, -10, 0] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                  className="relative w-64 h-64 rounded-full overflow-hidden shadow-xl border-4 border-white dark:border-gray-800"
+                >
+                  <img
+                    src="/IMG_1743258166866.jpeg"
+                    alt="Deependrasingh Kushvaha"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent"></div>
+                </motion.div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Personal Info Section */}
+      <section className="py-16 bg-white dark:bg-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center space-y-6"
+            viewport={{ once: true }}
+            className="text-center max-w-4xl mx-auto space-y-6"
           >
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white">
-              About Me
-            </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              A passionate DevSecOps engineer from Vadodara, Gujarat, dedicated to building secure, scalable, and automated infrastructure solutions.
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
+              My Journey
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+              From my early days as a security researcher to my current role in DevSecOps, I've been driven by a passion for creating secure, efficient, and scalable technology solutions. My journey spans across cybersecurity, cloud infrastructure, and automation, always with a focus on bridging the gap between development and operations while maintaining the highest security standards.
             </p>
-            <div className="flex items-center justify-center space-x-2 text-gray-600 dark:text-gray-400">
-              <MapPin className="w-5 h-5" />
-              <span>Vadodara, Gujarat, India</span>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+              <div className="bg-gray-50 dark:bg-gray-900 p-6 rounded-xl">
+                <div className="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-2">2020</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Started as Security Researcher</div>
+              </div>
+              <div className="bg-gray-50 dark:bg-gray-900 p-6 rounded-xl">
+                <div className="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-2">2022</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Began B.Tech in Cyber Security</div>
+              </div>
+              <div className="bg-gray-50 dark:bg-gray-900 p-6 rounded-xl">
+                <div className="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-2">2024</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Current DevSecOps Role</div>
+              </div>
             </div>
           </motion.div>
         </div>

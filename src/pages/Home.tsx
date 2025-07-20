@@ -126,20 +126,63 @@ const Home: React.FC = () => {
               className="relative flex justify-center"
             >
               <div className="relative">
+                {/* Animated background rings */}
                 <motion.div
-                  animate={{ rotate: 360 }}
+                  animate={{ rotate: 360, scale: [1, 1.1, 1] }}
                   transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                  className="absolute inset-0 bg-gradient-to-r from-primary-400 to-accent-400 rounded-full blur-lg opacity-30"
+                  className="absolute -inset-4 bg-gradient-to-r from-primary-400 via-accent-400 to-primary-400 rounded-full blur-xl opacity-20"
                 ></motion.div>
+                
+                <motion.div
+                  animate={{ rotate: -360, scale: [1, 0.9, 1] }}
+                  transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+                  className="absolute -inset-2 bg-gradient-to-l from-accent-300 via-primary-300 to-accent-300 rounded-full blur-lg opacity-30"
+                ></motion.div>
+                
+                {/* Main profile container */}
                 <motion.div
                   animate={{ float: [0, -20, 0] }}
                   transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                  className="relative w-80 h-80 bg-gradient-to-br from-primary-100 to-accent-100 dark:from-gray-700 dark:to-gray-600 rounded-full flex items-center justify-center shadow-2xl"
+                  className="relative w-80 h-80 rounded-full overflow-hidden shadow-2xl border-4 border-white dark:border-gray-800"
                 >
-                  <div className="w-72 h-72 bg-gradient-to-br from-primary-500 to-accent-500 rounded-full flex items-center justify-center text-white text-6xl font-bold">
-                    DK
-                  </div>
+                  {/* Profile Image */}
+                  <img
+                    src="/IMG_1743258166866.jpeg"
+                    alt="Deependrasingh Kushvaha"
+                    className="w-full h-full object-cover"
+                  />
+                  
+                  {/* Overlay gradient for better text visibility if needed */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                  
+                  {/* Status indicator */}
+                  <motion.div
+                    animate={{ scale: [1, 1.2, 1] }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                    className="absolute bottom-6 right-6 w-6 h-6 bg-green-500 rounded-full border-3 border-white dark:border-gray-800 shadow-lg"
+                  >
+                    <div className="absolute inset-1 bg-green-400 rounded-full animate-pulse"></div>
+                  </motion.div>
                 </motion.div>
+                
+                {/* Floating elements */}
+                <motion.div
+                  animate={{ y: [0, -10, 0], rotate: [0, 5, 0] }}
+                  transition={{ duration: 4, repeat: Infinity, delay: 1 }}
+                  className="absolute -top-4 -left-4 w-8 h-8 bg-primary-500 rounded-lg shadow-lg opacity-80"
+                ></motion.div>
+                
+                <motion.div
+                  animate={{ y: [0, 10, 0], rotate: [0, -5, 0] }}
+                  transition={{ duration: 5, repeat: Infinity, delay: 2 }}
+                  className="absolute -bottom-2 -right-6 w-6 h-6 bg-accent-500 rounded-full shadow-lg opacity-70"
+                ></motion.div>
+                
+                <motion.div
+                  animate={{ y: [0, -15, 0], x: [0, 5, 0] }}
+                  transition={{ duration: 6, repeat: Infinity, delay: 0.5 }}
+                  className="absolute top-1/2 -left-8 w-4 h-4 bg-secondary-500 rounded-sm shadow-lg opacity-60"
+                ></motion.div>
               </div>
             </motion.div>
           </div>
