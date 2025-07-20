@@ -53,8 +53,8 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'dipendra7043@gmail.com',
-      href: 'mailto:dipendra7043@gmail.com'
+      value: 'info@deependra.me',
+      href: 'mailto:info@deependra.me'
     },
     {
       icon: MapPin,
@@ -80,7 +80,7 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       label: 'Email',
-      href: 'mailto:dipendra7043@gmail.com',
+      href: 'mailto:info@deependra.me',
       color: 'hover:text-red-600'
     }
   ];
