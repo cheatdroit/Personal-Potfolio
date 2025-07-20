@@ -147,7 +147,7 @@ const Home: React.FC = () => {
                 >
                   {/* Profile Image */}
                   <img
-                    src="/IMG_1743258166866.jpeg"
+                    src="/IMG_1743258166866.webp"
                     alt="Deependrasingh Kushvaha"
                     className="w-full h-full object-cover"
                   />

@@ -62,7 +62,7 @@ const About: React.FC = () => {
                   className="relative w-64 h-64 rounded-full overflow-hidden shadow-xl border-4 border-white dark:border-gray-800"
                 >
                   <img
-                    src="/IMG_1743258166866.jpeg"
+                    src="/IMG_1743258166866.webp"
                     alt="Deependrasingh Kushvaha"
                     className="w-full h-full object-cover"
                   />
